@@ -1,0 +1,23 @@
+/*Tag Selector*/
+
+h1 {
+    color: red;
+    font-size: 200px;
+}
+
+h3 {
+    color: aqua;
+}
+
+/*Class Selector*/
+.bacon {
+    background-color: blue;
+}
+
+/*ID Selector*/
+#bacon1 {
+    width: 100px;
+}
+#bacon2 {
+    width: 200px;
+}

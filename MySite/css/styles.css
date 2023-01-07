@@ -1,0 +1,230 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+.icon {
+    display: inline-block;
+    height: 50px;
+    width: 110px;
+    padding-left: 40%; 
+}
+
+.menu {
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: center;
+    outline: none;
+    position: relative;
+    width: 24px;
+}
+.profile {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    padding-left: 45%;
+}
+/*.header {
+    width: 100%;
+    background-color: blue;
+    height: 60px;
+}*/
+
+.header {
+    align-items: stretch;
+    border: none;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 74px 1fr;
+    grid-template-rows: 100%;
+    height: var(--header-height);
+    justify-content: space-between;
+    padding: var(--base-pixel-size) var(--padding-sides);
+    position: fixed;
+    top: var(--privacy-banner-height);
+    transform: translateY(0);
+    transition: transform .3s;
+    width: 100%;
+    z-index: 250;
+}
+
+.d2 {
+    gap: var(--grid-gap-static-sm);
+    display: flex;
+}
+
+.d3 a {
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    outline: none;
+    position: relative;
+    width: 50px;
+    justify-content: center;
+}
+
+.d4 {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-family: var(--font-family-h);
+    transition: all .3s;
+    z-index: 10;
+}
+
+.d5 {
+    display: flex;
+    justify-content: center;
+}
+
+.d6 a {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.d6 a .d61 {
+        background-image: url(../images/ERALogo1.png);
+}
+
+.d6 a .d61.d62 {
+    opacity: 1;
+}
+
+.d6 a d62, .d6 a .d61 {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity .3s;
+        width: 90px;
+}
+
+.d7 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.d8, .d9 {
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.d8 {
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    background: black;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    border: solid 2px;
+    border-color: #008529;
+}
+
+.d9 {
+    background-color: green;
+    bottom: 0;
+    height: 2px;
+    transition: all .3s;
+}
+
+:root {
+    --text-section-max-width: 640px;
+    --base-pixel-size: 12px;
+    --base-rem-size: 0.75rem;
+    --half-rem-size: calc(var(--base-rem-size) / 2);
+    --twice-rem-size: calc(var(--base-rem-size) * 2);
+    --section-margin-bottom: calc(var(--base-rem-size) * 4);
+    --header-height: 60px;
+    --breadcrumbs-height: calc(var(--base-pixel-size) * 3.5);
+    --max-width: 1920px;
+    --standard-color: #fcaf17;
+    --color-h: #fff;
+    --body-color: #e8e8e8;
+    --background-color: #0b0b0b;
+    --card-background-color: #000;
+    --border-color: #282828;
+    --privacy-banner-height: 0px;
+    --game-header-height: 50px;
+    --standard-grid-gap: calc(var(--base-rem-size) * 2);
+    --image-margin-bottom: inherit;
+    --image-rounding: 0px;
+    --image-rounding-static: 16px;
+    --image-rounding-static-sm: 8px;
+    --image-rounding-static-xs: 4px;
+    --grid-gap-static-xs: 0.5rem;
+    --grid-gap-static-sm: 1rem;
+    --grid-gap-static-md: 2rem;
+    --grid-gap-static-lg: 4rem;
+    --grid-gap-static-xl: 8rem;
+    --max-width-static: 640px;
+    --max-width-static-md: 1088px;
+    --max-width-static-lg: 1920px;
+    --max-width-static-xl: 2560px;
+    --margin-static: 0 0 2rem;
+    --h2-margin: 2rem 0 0 0;
+    --padding-sides: var(--grid-gap-static-lg);
+    --padding-top-bottom: var(--padding-sides);
+    --padding-static: var(--padding-sides);
+    --font-size-1: 0.64rem;
+    --font-size-2: 0.8rem;
+    --font-size-3: 1rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.563rem;
+    --font-size-6: 1.953rem;
+    --font-size-7: 2.441rem;
+    --font-size-8: 3.052rem;
+    --font-size-9: 3.815rem;
+    --font-size-10: 4.768rem;
+    --font-family-std: var(--rsg-font-family-std);
+    --font-family-h: var(--rsg-font-family-h);
+    --font-family-h-halloween: nightmar;
+    Show All Properties (17 more)
+}
+
+:root * {
+    box-sizing: border-box;
+}
+
+:root a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+a {
+    background-color: initial;
+}
+
+.top-container {
+    width: 200px;
+    height: 200px;
+    border: solid 2px;
+    margin-top: 60px;
+    background-color: blue;
+    border-color: #008529;
+}
+.middle-container {
+    width: 200px;
+    height: 200px;
+    border: solid 2px;
+    margin-left: 200px;
+    background-color: red;
+    border-color: #008529;
+}
+.bot-container {
+    width: 200px;
+    height: 200px;
+    border: solid 2px;
+    margin-left: 400px;
+    background-color: orange;
+    border-color: #008529;
+}
