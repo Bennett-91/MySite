@@ -1,0 +1,25 @@
+body{
+	background-color: black;
+}
+
+.top-container {
+	background-color: blue;
+}
+
+.middle-container {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
+
+.bot-container {
+	width: 200px;
+	height: 200px;
+	background-color: orange;
+}
+
+.pro{
+	text-decoration: underline;
+}
+
+
