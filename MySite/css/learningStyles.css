@@ -1,21 +1,31 @@
 body{
 	background-color: black;
+	margin: 0; 
 }
 
 .top-container {
-	background-color: blue;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	position: absolute;
+	left: 400px;
+	top: 400px;
 }
 
 .middle-container {
 	width: 200px;
 	height: 200px;
-	background-color: red;
+	background-color: blue;
+	position: absolute;
+	left: 200px;
+	top: 200px;
 }
 
 .bot-container {
 	width: 200px;
 	height: 200px;
-	background-color: orange;
+	background-color: yellow;
+	position: fixed;
 }
 
 .pro{
