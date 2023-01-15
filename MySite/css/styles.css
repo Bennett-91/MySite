@@ -1,4 +1,5 @@
 /*#region Root*/
+/*TODO review root*/
 :root {
     --text-section-max-width: 640px;
     --base-pixel-size: 12px;
@@ -50,7 +51,13 @@
     --font-family-std: var(--rsg-font-family-std);
     --font-family-h: var(--rsg-font-family-h);
     --font-family-h-halloween: nightmar;
-    Show All Properties (17 more)
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--background-color,transparent);
+    font-family: var(--font-family-std,HelveticaNowText);
+    font-size: calc(var(--root-font-size) * 1px);
+    font-weight: var(--font-weight-std,400);
+    letter-spacing: var(--letter-spacing-std,-.025em);
+    line-height: var(--line-height-std,1.6);
 }
 
     :root * {
@@ -72,15 +79,22 @@ body {
 a {
     background-color: initial;
 }
+
+h1{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+
 /*#endregion Tag Selectors*/
 
 /*#region Class Selectors*/
-
-.icon {
-    display: inline-block;
-    height: 50px;
-    width: 110px;
-    padding-left: 40%;
+.background {
+    height: 100%;
+    width: 100%;
 }
 
 .menu {
@@ -95,30 +109,30 @@ a {
 }
 
 .profile {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    padding-left: 45%;
+    background-color: initial;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: calc(var(--base-pixel-size) * 3);
+    width: calc(var(--base-pixel-size) * 3);
 }
-/*.header {
-    width: 100%;
-    background-color: blue;
-    height: 60px;
-}*/
+
 .header {
     align-items: stretch;
     border: none;
     color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 74px 1fr;
-    grid-template-rows: 100%;
+    display: grid; /*Sets grid for header bar*/
+    grid-template-columns: 1fr 74px 1fr; /*Sets grid for header bar*/
+    grid-template-rows: 100%; /*Sets grid for header bar*/
     height: var(--header-height);
     justify-content: space-between;
-    padding: var(--base-pixel-size) var(--padding-sides);
-    position: fixed;
+    padding: var(--base-pixel-size) var(--padding-sides); /*Creates centre placement for menu bar*/
+    position: fixed; /*Required to push down other items from the header bar*/
     top: var(--privacy-banner-height);
-    transform: translateY(0);
-    transition: transform .3s;
+    transform: translateY(0); /*Requred to make the header slide away*/
+    transition: transform .3s; /*Transition Time for header to slide away*/
     width: 100%;
     z-index: 250;
 }
@@ -128,31 +142,7 @@ a {
     display: flex;
 }
 
-.d3 a {
-    cursor: pointer;
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    outline: none;
-    position: relative;
-    width: 50px;
-    justify-content: center;
-}
-
-.d4 {
-    align-items: center;
-    color: #fff;
-    display: flex;
-    font-family: var(--font-family-h);
-    transition: all .3s;
-    z-index: 10;
-}
-
-.d5 {
-    display: flex;
-    justify-content: center;
-}
-
+/*D6 = Logo*/
 .d6 a {
     display: block;
     height: 100%;
@@ -171,8 +161,8 @@ a {
 
     .d6 a d62, .d6 a .d61 {
         background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-repeat: no-repeat;/*Stops img repeating*/
+        background-size: contain;/*Shrinks img to box*/
         height: 100%;
         left: 0;
         opacity: 0;
@@ -187,8 +177,8 @@ a {
     justify-content: flex-end;
 }
 
+/*D8 & D9 are slider functionality*/
 .d8 {
-    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     background: black;
     height: 100%;
@@ -196,18 +186,98 @@ a {
     z-index: -1;
     border: solid 2px;
     border-color: #008529;
-}
-
-.d8, .d9 {
     left: 0;
     position: absolute;
     width: 100%;
 }
 
-.d9 {
-    background-color: green;
+/*Nav Menu*/
+.navi {
+    border-right: 1px solid #161616;
+    width: min-content;
+    backdrop-filter: blur(40px);
+    background-position: 50%;
+    background-size: cover;
+    background: rgba(0,0,0,.85);
+    border: none;
     bottom: 0;
-    height: 2px;
-    transition: all .3s;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: var(--privacy-banner-height);
+    transform: translateX(calc(-100% - 10px));
+    transition: transform .3s ease-in-out;
+    width: 100vw;
+    z-index: 200;
 }
+
+.d9 {
+    gap: var(--grid-gap-static-md);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: calc(var(--header-height) + var(--grid-gap-static-md));
+}
+
+.d10 {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding-left: var(--padding-sides);
+    padding-right: var(--padding-sides);
+    width: 100%;
+}
+
+.search{
+    background: #111;
+    border-radius: var(--image-rounding-static-xs);
+    display: flex;
+    position: relative;
+}
+
+.search button {
+    background-color: initial;
+    background-image: url(../images/Search.png);
+    background-origin: content-box;
+    background-position: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    content: "";
+    cursor: pointer;
+    margin: 0 0 0 var(--grid-gap-static-sm);
+    width: 36px;
+}
+
+    .search input {
+        background-color: initial;
+        border: none;
+        color: #fff;
+        outline: none;
+        padding: var(--grid-gap-static-sm);
+        width: 100%;
+    }
+
+.options {
+    gap: var(--grid-gap-static-sm);
+    color: var(--color-h);
+    display: grid;
+    font-family: var(--font-family-h);
+    font-size: var(--font-size-5);
+    font-weight: 700;
+    grid-auto-rows: max-content;
+    margin-bottom: var(--grid-gap-static-md);
+    opacity: 1; /*TODO When menu button is clicked opacity = 1 else default 0*/
+    padding-bottom: var(--padding-top-bottom);
+    transition: opacity .4s ease-in;
+}
+
+.options a {
+    min-width: max-content;
+    text-decoration: none;
+    transition: color .3s ease;
+    width: 100%;
+}
+
 /*#endregion Class Selectors*/
