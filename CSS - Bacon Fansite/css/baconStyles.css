@@ -2,7 +2,7 @@
 
 h1 {
     color: red;
-    font-size: 200px;
+    font-size: 100px;
 }
 
 h3 {
@@ -17,6 +17,8 @@ h3 {
 /*ID Selector*/
 #bacon1 {
     width: 100px;
+    position: relative;
+    left: 30px;
 }
 #bacon2 {
     width: 200px;
