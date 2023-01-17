@@ -88,6 +88,13 @@ p{
     color: white;
 }
 
+div {
+    display: block;
+}
+
+nav {
+    display: block;
+}
 
 /*#endregion Tag Selectors*/
 
@@ -142,13 +149,42 @@ p{
     display: flex;
 }
 
+.d3 a {
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: center;
+    outline: none;
+    position: relative;
+    width: 24px;
+}
+
+a span:first-child {
+    transform: translateY(-400%);
+}
+
+.d3 a span {
+    background: #fff;
+    border-radius: 1rem;
+    height: 2px;
+    position: absolute;
+    transform-origin: left center;
+    transition: .2s;
+    width: 100%;
+}
+
+a span:last-child {
+    transform: translateY(400%);
+}
+
 /*D6 = Logo*/
 .d6 a {
     display: block;
     height: 100%;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: 121%;
 }
 
     .d6 a .d61 {
@@ -191,10 +227,21 @@ p{
     width: 100%;
 }
 
+.d9 {
+    background-color: #161616;
+    bottom: 0;
+    height: 2px;
+    transition: all .3s;
+}
+
+.d8, .d9 {
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
 /*Nav Menu*/
 .navi {
-    border-right: 1px solid #161616;
-    width: min-content;
     backdrop-filter: blur(40px);
     background-position: 50%;
     background-size: cover;
@@ -210,8 +257,12 @@ p{
     width: 100vw;
     z-index: 200;
 }
+/*TODO on menu click open navi*/
+.open {
+    transform: translateX(0);
+}
 
-.d9 {
+.d91 {
     gap: var(--grid-gap-static-md);
     display: grid;
     grid-template-columns: 1fr;

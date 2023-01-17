@@ -4,16 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>My Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <div>
         <!--Official top-container -->
         <header class="header">
             <div class='d2'>
                 <div class="d3">
-                    <a href="index.html"><img src="images/Menu.png" alt="menu-img" class="menu"></a>
+                    <a title="Open Menu" role="button" class="active" href="javascript:Menu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
                 </div>
             </div>
             <div class="d6">
@@ -28,10 +38,12 @@
                 <a href="contact-me.html"><img src="images/Profile.png" alt="profile-img" class="profile"></a>
             </div>
             <div class="d8"></div>
+            <div class="d9"></div>
         </header>
     </div>
-    <nav role="navigation" title="Site" class="Navi">
-        <div class="d9">
+
+    <nav role="navigation" title="Site" class="navi">
+        <div class="d91">
             <div class="d10">
                 <form action="#" class="search" role="search">
                     <button type="submit" role="button" title="Submit"></button>
@@ -48,14 +60,73 @@
     </nav>
     <img class="background" src="images/Background.jpg" alt="neon" />
 
-    <main></main>
+    <main>
+
+    </main>
 
     <div class="top-container">
         <h1>I'm Kyle</h1>
         <p>A Programmer</p>
     </div>
     <div class="middle-container">
+
     </div>
-    <div class="bot-container"></div>
+    <div class="bot-container">
+
+    </div>
 </body>
 </html>
+
+
+<!--<header class="c88e3bf2c5a3eea47de1     e40a03373925b1f43678">
+    <div class="f03aa693d57989d2268d">
+    <div class="a69f93a42729f8a8c895">
+        <a title="Open Menu" role="button" aria-current="page" class="active" href="/">
+        <span></span><span></span><span></span></a>
+        </div>
+    <div class="d66078ecc21fc876edca  e864460048fa56b5d5d9" role="navigation" title="Breadcrumbs">
+        <div class="b4b8f1f467f93b7b62e4">
+        </div>
+        </div>
+        </div>
+    <div class="ac8debfb2b628b833f4c">
+    <a data-gtm-category="Mega Nav" data-gtm-action="Main Nav" data-gtm-label="Main Logo" title="Home" role="link" aria-current="page" class="active" href="/">
+        <div class="a3664df75f1e5452d7d8 ">
+            </div>
+        <div class="a3664df75f1e5452d7d8 edee6ccaf0d7182160ee">
+            </div>
+        </a>
+        </div>
+    <div class="eb89905202a9ce235483">
+    <div class="d9df13e6f2c2e538bf9a b20587acf5fb4f24ff38 ">
+        <button class="e5ac5ae8ee36599f8b50" aria-label="Toggle Social Club Menu" type="submit">
+            </button>
+        <nav class="da2df14f41a84f0ff4ff " role="navigation" title="Social Club">
+        <a title="Sign In" href="https://signin.rockstargames.com/connect/authorize/rsg?returnUrl=/&amp;lang=en-us">Sign In</a>
+        <a title="Join Social Club" href="https://signin.rockstargames.com/create/?cid=rsg&amp;returnUrl=/&amp;lang=en-us">Join Social Club</a>
+            </nav>
+        </div>
+        </div>
+    <div class="b87c9cb79dc665de220b"></div>
+    <div class="bd84e6c23181dcddf241 "></div>
+</header>
+<nav role="navigation" title="Site" class="ab6a2621d310cc5aa5fd ">
+    <div class="ff7185c4155fa032f25a">
+    <div class="a53d5435910c93787e42">
+        <form action="#" class="d190f154b297a6c860c6" role="search">
+        <button type="submit" role="button" title="Submit">
+            </button>
+        <input autocomplete="off" enterkeyhint="search" name="q" placeholder="Search Rockstar Games" value="">
+            </form>
+        </div>
+    <div class="cc3f6ea321e1707fa0eb" role="button" tabindex="0">
+        <a data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Newswire" class="" href="/newswire">Newswire</a>
+        <a data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Games" class="" href="/games">Games</a>
+        <a data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Videos" class="" href="/videos">Videos</a><a data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Downloads" class="" href="/downloads">Downloads</a>
+        <a href="https://support.rockstargames.com?redirect_lang=en_us" data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Support" target="_blank">Support</a>
+        <a href="https://socialclub.rockstargames.com/" data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Socialclub" target="_blank">Social Club</a>
+        <a href="https://socialclub.rockstargames.com/rockstar-games-launcher" data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Launcher" target="_blank">Launcher</a>
+        <a href="https://store.rockstargames.com/" data-gtm-category="Site Nav" data-gtm-action="Main Nav Click" data-gtm-label="Store" target="_blank">Store</a>
+        </div>
+        </div>
+</nav>-->
