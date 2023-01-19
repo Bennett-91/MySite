@@ -212,6 +212,12 @@ a span:last-child {
     display: flex;
     justify-content: flex-end;
 }
+.d71{
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+}
 
 /*D8 & D9 are slider functionality*/
 .d8 {
@@ -244,7 +250,6 @@ a span:last-child {
 .navi {
     backdrop-filter: blur(40px);
     background-position: 50%;
-    background-size: cover;
     background: rgba(0,0,0,.85);
     border: none;
     bottom: 0;
@@ -254,9 +259,62 @@ a span:last-child {
     top: var(--privacy-banner-height);
     transform: translateX(calc(-100% - 10px));
     transition: transform .3s ease-in-out;
-    width: 100vw;
     z-index: 200;
 }
+
+.UNavi {
+    background: var(--background-color);
+    border-radius: 0 0 var(--image-rounding-static-sm) var(--image-rounding-static-sm);
+    bottom: 0;
+    box-shadow: 0 0 0 transparent;
+    color: var(--body-color);
+    display: grid;
+    height: min-content;
+    padding: var(--grid-gap-static-sm) 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    transition: all .2s ease-out;
+    width: max-content;
+    z-index: -10;
+}
+
+.UNaviOpen {
+    box-shadow: 0 10px 30px rgb(0 0 0 / 50%);
+    pointer-events: auto;
+    transform: translateY(100%);
+}
+
+nav.UNavi a{
+    padding: 1rem 2rem;
+    transition: background .3s ease-in-out;
+}
+
+nav.UNavi a:not(:last-child) {
+    border-bottom: 1px solid hsla(0,0%,85%,.1);
+}
+
+.userMenu {
+    background-image: url("../images/Profile.png");
+    background-color: initial;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: calc(var(--base-pixel-size) * 3);
+    width: calc(var(--base-pixel-size) * 3);
+}
+
+.closeNav{
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    transition: background .4s ease-out;
+    width: 100vw;
+    z-index: 100;
+}
+
 /*TODO on menu click open navi*/
 .open {
     transform: translateX(0);
