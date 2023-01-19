@@ -35,7 +35,15 @@
                 </a>
             </div>
             <div class="d7">
-                <a href="contact-me.html"><img src="images/Profile.png" alt="profile-img" class="profile"></a>
+                <div class="d71">
+                    <button title="Open User Menu" role="button" class="userMenu" onclick="javascript:UserMenu()">
+                        <nav class="UNavi" role="navigation" title="User Menu">
+                            <!-- TODO unnest anchor tags -->
+                            <a class="" href="/UserMenu1">UserMenu1</a>
+                            <a class="" href="/UserMenu2">UserMenu2</a>
+                        </nav>
+                    </button>
+                </div>
             </div>
             <div class="d8"></div>
             <div class="d9"></div>
@@ -58,9 +66,12 @@
             </div>
         </div>
     </nav>
-    <img class="background" src="images/Background.jpg" alt="neon" />
+    
+    <div aria-label="Close Nav" class="closeNav" role="button" onclick="javascript:closeNav()">
 
+    </div>
     <main>
+    <img class="background" src="images/Background.jpg" alt="neon" />
 
     </main>
 
